@@ -11,12 +11,13 @@
 function solve(s) {
   let alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   let alpha1 = alpha.toLocaleLowerCase().split('');
+  let consonant = 'bcdfghjklmnpqrstvwxyz';
   let pos = 0;
   for(let i = alpha1.length -1; i >= 0; i -= 1) {
     for(let j = 0; j < s.length; j += 1) {
       if(alpha1[i] === s[j]) {
         if(pos < alpha1[i].length) {
-          pos = alpha1.indexOf(alpha1[i]) + 1;
+          pos += alpha1.indexOf(alpha1[i]) + 1;
           console.log(pos);
 
         }
