@@ -8,13 +8,9 @@
 // getMissingElement( [0, 5, 1, 3, 2, 9, 7, 6, 4] ) // returns 8
 // getMissingElement( [9, 2, 4, 5, 7, 0, 8, 6, 1] ) // returns 3
 
-function getMissingElement(superImportantArray){
-  let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  for(let i = 0; i < arr.length; i += 1) {
-    if(!superImportantArray.includes(arr[i])) {
-      return arr[i]
-    }      
+function getMissingElement(superImportantArray){  
+  superImportantArray.forEach(element => {
+    
   }
-}
 
 getMissingElement([9, 2, 4, 5, 7, 0, 8, 6, 1]);
