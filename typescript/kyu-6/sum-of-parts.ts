@@ -26,17 +26,16 @@
 export function partsSums(ls: number[]): number[] {
   let arrSum = [];
   let sum = 0;
+  let zero = [0]
   if(ls === []) {
-    return [0]
+    return zero;
   }
-  for(let i = 0; i < ls[1]; i += 1) {
+  arrSum.push(0)
+  for(let j = ls.length -1; j >= 0; j -= 1) {
+    sum += ls[j];
     arrSum.push(sum)
-    for(let j = ls.length -1; j >= 0; j -= 1) {
-      sum += ls[j];
-      arrSum.push(sum)
-    }
   }
   return arrSum.reverse()
 }
 
-partsSums([0, 1, 3, 6, 10])
+partsSums([744125, 935, 407, 454, 430, 90, 144, 6710213, 889, 810, 2579358])
